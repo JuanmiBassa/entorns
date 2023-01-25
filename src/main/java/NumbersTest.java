@@ -24,19 +24,15 @@ public class NumbersTest {
     }
 
     @Test
-    public void donat_30() {
+    public void decenas() {
         assertEquals("Trenta", NumbersCat.say(30));
+        assertEquals("Quaranta", NumbersCat.say(40));
     }
 
     @Test
     public void donat_20() {
         assertEquals("Vint", NumbersCat.say(20));
         assertEquals("Vint-i-dos", NumbersCat.say(22));
-    }
-
-    @Test
-    public void donat_40() {
-        assertEquals("Quaranta", NumbersCat.say(40));
     }
 
     @Test
