@@ -29,13 +29,9 @@ public class NumbersTest {
     }
 
     @Test
-    public void donat_22() {
-        assertEquals("Vint-i-dos", NumbersCat.say(22));
-    }
-
-    @Test
     public void donat_20() {
         assertEquals("Vint", NumbersCat.say(20));
+        assertEquals("Vint-i-dos", NumbersCat.say(22));
     }
 
     @Test
