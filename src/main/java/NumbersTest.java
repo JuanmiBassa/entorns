@@ -81,6 +81,11 @@ public class NumbersTest {
     }
 
     @Test
+    public void donat_127() {
+        assertEquals("Cent vint-i-set", NumbersCat.say(127));
+    }
+
+    @Test
     public void donat_199() {
         assertEquals("Cent noranta-nou", NumbersCat.say(199));
     }
