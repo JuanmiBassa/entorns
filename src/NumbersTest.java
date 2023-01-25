@@ -21,6 +21,7 @@ public class NumbersTest {
     @Test
     public void donat_menys3() {
         assertEquals("Donat -3 ens torna Menys Tres", "Menys tres", NumbersCat.say(-3));
+        assertEquals("Trenta-un", NumbersCat.say(31));
     }
 
     @Test
@@ -36,11 +37,6 @@ public class NumbersTest {
     @Test
     public void donat_20() {
         assertEquals("Vint", NumbersCat.say(20));
-    }
-
-    @Test
-    public void donat_31() {
-        assertEquals("Trenta-un", NumbersCat.say(31));
     }
 
     @Test
