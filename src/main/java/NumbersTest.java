@@ -129,4 +129,10 @@ public class NumbersTest {
     public void donat_851725() {
         assertEquals("Vuit-cents cincuanta-un-mil set-cents vint-i-cinc", NumbersCat.say(851725));
     }
+
+    @Test
+    public void donat_menys851725() {
+        assertEquals("Menys vuit-cents cincuanta-un-mil set-cents vint-i-cinc", NumbersCat.say(-851725));
+    }
+
 }
