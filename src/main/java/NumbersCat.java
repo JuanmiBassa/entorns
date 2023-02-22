@@ -58,38 +58,21 @@ public class NumbersCat {
         }
 
         if (n >= 100 && n < 1000) {
-            int centena = (int) (n / 100);
-            int rest = (int) n % 100;
-            String nombreString = "";
-            String espai = "";
-            if (centena == 1) {
-                nombreString = "Cent";
-            } else {
-                nombreString = say(centena) + "-cents";
-            }
-            if (rest != 0) {
-                espai = " ";
-                nombreString = nombreString + espai + say(rest).toLowerCase();
-            }
-            return nombreString;
+            return CalcularNum("Cent", "-cents", n, 100);
+        } else if (n >= 1000 && n < 1_000_000) {
+            return CalcularNum("Mil", " mil", n, 1000);
+        } else {
+            return null;
         }
+    }
 
-        if (n >= 1000) {
-            int miler = (int) (n / 1000);
-            int rest = (int) n % 1000;
-            String nombreString = "";
-            String espai = "";
-            if (miler == 1) {
-                nombreString = "Mil";
-            } else {
-                nombreString = say(miler) + "-mil";
-            }
-            if (rest != 0) {
-                espai = " ";
-                nombreString = nombreString + espai + say(rest).toLowerCase();
-            }
-            return nombreString;
-        }
-        return null;
+    private static String CalcularNum(String UDtextEscala, String textEscala, long n, int div) {
+        int numEscala = (int) (n / div);
+        int rest = (int) n % div;
+        String resFinal = "";
+        String espai = "";
+        resFinal = numEscala == 1 ? UDtextEscala : say(numEscala) + textEscala;
+        resFinal += rest != 0 ? " " + say(rest).toLowerCase() : "";
+        return resFinal;
     }
 }
