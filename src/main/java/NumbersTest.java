@@ -69,7 +69,6 @@ public class NumbersTest {
         assertEquals("Vint-i-un mil vint-i-cinc", NumbersCat.say(21025));
         assertEquals("Vuit-cents cinquanta-un mil set-cents vint-i-cinc", NumbersCat.say(851725));
         assertEquals("Nou-cents noranta-nou mil nou-cents noranta-nou", NumbersCat.say(999999));
-
     }
 
     @Test

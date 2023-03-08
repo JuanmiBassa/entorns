@@ -72,7 +72,6 @@ public class NumbersCat {
         String resFinal;
         resFinal = numEscala == 1 ? UDtextEscala : say(numEscala) + textEscala;
         resFinal += rest != 0 ? " " + say(rest).toLowerCase() : "";
-
         return resFinal;
     }
 }
