@@ -4,9 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class NumbersTest {
-    public static void main(String[] args) {
-
-    }
 
     @Test
     public void donat_0() {

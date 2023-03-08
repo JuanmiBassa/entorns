@@ -1,7 +1,8 @@
 public class NumbersCat {
     public static String say(long n) {
-
-        validarNegativo(n);
+        if (n < 0) {
+            return validarNegativo(n);
+        }
 
         switch ((int) (n)) {
             case 0:
@@ -44,15 +45,8 @@ public class NumbersCat {
                 return "Noranta";
         }
 
-        int unidad = 0;
-        int decena = 0;
         if (n > 20 && n < 100) {
-            unidad = (int) n % 10;
-            decena = 10 * ((int) n / 10);
-            if (n >= 21 && n <= 29) {
-                return say(decena) + "-i-" + say(unidad).toLowerCase();
-            }
-            return say(decena) + "-" + say(unidad).toLowerCase();
+            return del20al100(n);
         }
 
         if (n >= 100 && n < 1000) {
@@ -64,13 +58,25 @@ public class NumbersCat {
         }
     }
 
-    private static String validarNegativo(long n) {
+    public static String del20al100(long n) {
+        if (n > 20 && n < 100) {
+            int unidad = (int) n % 10;
+            int decena = 10 * ((int) n / 10);
+            if (n >= 21 && n <= 29) {
+                return say(decena) + "-i-" + say(unidad).toLowerCase();
+            }
+            return say(decena) + "-" + say(unidad).toLowerCase();
+        }
+        return null;
+    }
+
+    public static String validarNegativo(long n) {
         if (n < 0) {
             return "Menys " + say(-n).toLowerCase();
         } else return "";
     }
 
-    private static String CalcularNum(String UDtextEscala, String textEscala, long n, int div) {
+    public static String CalcularNum(String UDtextEscala, String textEscala, long n, int div) {
         int numEscala = (int) (n / div);
         int rest = (int) n % div;
         String resFinal;
