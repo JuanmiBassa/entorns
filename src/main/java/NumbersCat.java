@@ -35,7 +35,7 @@ public class NumbersCat {
             case 40:
                 return "Quaranta";
             case 50:
-                return "Cincuanta";
+                return "Cinquanta";
             case 60:
                 return "Seixanta";
             case 70:
@@ -69,8 +69,7 @@ public class NumbersCat {
     private static String CalcularNum(String UDtextEscala, String textEscala, long n, int div) {
         int numEscala = (int) (n / div);
         int rest = (int) n % div;
-        String resFinal = "";
-        String espai = "";
+        String resFinal;
         resFinal = numEscala == 1 ? UDtextEscala : say(numEscala) + textEscala;
         resFinal += rest != 0 ? " " + say(rest).toLowerCase() : "";
 

@@ -74,6 +74,6 @@ public class NumbersTest {
 
     @Test
     public void donat_851725() {
-        assertEquals("Vuit-cents cincuanta-un-mil set-cents vint-i-cinc", NumbersCat.say(851725));
+        assertEquals("Vuit-cents cinquanta-un mil set-cents vint-i-cinc", NumbersCat.say(851725));
     }
 }
