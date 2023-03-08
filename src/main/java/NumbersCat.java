@@ -1,9 +1,7 @@
 public class NumbersCat {
     public static String say(long n) {
 
-        if (n < 0) {
-            return "Menys " + say(-n).toLowerCase();
-        }
+        validarNegativo(n);
 
         switch ((int) (n)) {
             case 0:
@@ -64,6 +62,12 @@ public class NumbersCat {
         } else {
             return null;
         }
+    }
+
+    private static String validarNegativo(long n) {
+        if (n < 0) {
+            return "Menys " + say(-n).toLowerCase();
+        } else return "";
     }
 
     private static String CalcularNum(String UDtextEscala, String textEscala, long n, int div) {
